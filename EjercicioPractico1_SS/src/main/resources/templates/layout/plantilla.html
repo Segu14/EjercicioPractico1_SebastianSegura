@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!-- Conexion a la librería para que no hayan erorres de compilacion -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>[[#{aplicacion.titulo}]]</title>
+        <meta charset="UTF-8"/>
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>        
+    </head>
+    <body>
+        <header th:fragment="header" class="header">
+            <nav class="bg-success navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand">Librería Segu</a>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+            </nav>
+
+        </header>
+        <section th:fragment="section">
+            <div class="video">
+                <iframe width="1080" height="720" 
+                        src="https://www.youtube.com/embed/19wHa5lRkiY?si=2TztzNLIBT2jHlH-" 
+                        title="Comenzar a leer" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        style="margin-left: 160px; margin-top: 50px"></iframe>
+            </div>
+        </section>
+        <footer th:fragment="footer" class="bg-info text-white mt-5 p-2">
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center">
+                        &COPY [[#{plantilla.derechos}]]
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
